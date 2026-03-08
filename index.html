@@ -3,100 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham Tanwar | Cloud & Data Professional</title>
+    <title>Shubham Tanwar | Cloud & Data</title>
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-green: #34d399;
-        }
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
             margin: 0;
-            padding: 0;
+            padding: 40px 20px;
             line-height: 1.6;
         }
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
         }
-        header {
-            text-align: center;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
+        h1 { color: #58a6ff; font-size: 2.5em; margin-bottom: 5px; }
+        h2 { color: #2ea043; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-top: 30px; }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
         }
-        h1 {
-            color: var(--accent);
-            font-size: 3em;
-            margin: 0 0 10px 0;
-            letter-spacing: -0.5px;
-        }
-        .contact-info {
-            color: var(--text-muted);
-            font-size: 1.1em;
-        }
-        .contact-info span {
-            margin: 0 10px;
-        }
-        h2 {
-            color: var(--accent-green);
-            font-size: 1.8em;
-            margin-top: 0;
-            border-bottom: 2px solid #334155;
-            padding-bottom: 10px;
-        }
-        .section {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .skill-category h3 {
-            color: var(--accent);
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        ul {
-            padding-left: 20px;
-            margin: 0;
-            color: var(--text-muted);
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .project {
-            margin-bottom: 25px;
-        }
-        .project h3 {
-            color: var(--accent);
-            margin: 0 0 5px 0;
-            font-size: 1.4em;
-        }
-        .project-meta {
-            font-size: 0.9em;
-            color: var(--accent-green);
-            margin-bottom: 15px;
-            font-family: monospace;
-        }
-        .education-item, .cert-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
-        .education-title {
-            font-weight: bold;
-            color: var(--accent);
-        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .highlight { color: #58a6ff; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 40px;">
+            <h1>Shubham Tanwar</h1>
+            <p>📍 New Delhi | 📞 9717981817 | ✉️ shubhamtanwar691@gmail.com</p>
+        </header>
+
+        <div class="card">
+            <h2>Professional Summary</h2>
+            <p>IT Professional specializing in Data Analytics and Cloud Infrastructure. Proven expertise building automated pipelines on AWS and Azure, alongside analyzing complex datasets using Python and SQL.</p>
+        </div>
+
+        <div class="card">
+            <h2>Live Cloud Project: Automated CI/CD Pipeline</h2>
+            <ul>
+                <li><strong>Architecture:</strong> Hosted on AWS EC2 running Red Hat Enterprise Linux (RHEL).</li>
+                <li><strong>Automation:</strong> Engineered a continuous deployment pipeline using GitHub Actions to automatically push code to this live Apache server via secure SSH.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><span class="highlight">Cloud & DevOps:</span> AWS, Azure, GCP, Docker, Kubernetes, Terraform, CI/CD.</li>
+                <li><span class="highlight">Systems:</span> Linux CentOS, RHEL, Bash/Shell Scripting, Networking.</li>
+                <li><span class="highlight">Data:</span> Python, SQL, Power BI, Tableau, Pandas, NumPy, ETL.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Education & Certifications</h2>
+            <ul>
+                <li><strong>MCA:</strong> Vivekananda Institute of Professional Studies -TC (Expected 2026)</li>
+                <li><strong>Oracle:</strong> Cloud Infrastructure 2025 Foundations Associate</li>
+                <li><strong>Red Hat:</strong> RHCSA & RHCSE Training (Network Nuts)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
