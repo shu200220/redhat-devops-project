@@ -3,92 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham's DevOps Portfolio</title>
+    <title>Shubham Tanwar | Cloud & Data Professional</title>
     <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-green: #34d399;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
         }
         header {
-            border-bottom: 2px solid #58a6ff;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
         }
         h1 {
-            color: #58a6ff;
-            font-size: 2.5em;
-            margin-bottom: 5px;
+            color: var(--accent);
+            font-size: 3em;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+        .contact-info {
+            color: var(--text-muted);
+            font-size: 1.1em;
+        }
+        .contact-info span {
+            margin: 0 10px;
         }
         h2 {
-            color: #2ea043;
-            margin-top: 30px;
+            color: var(--accent-green);
+            font-size: 1.8em;
+            margin-top: 0;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
         }
-        .subtitle {
+        .section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .skill-category h3 {
+            color: var(--accent);
             font-size: 1.2em;
-            color: #8b949e;
-            font-style: italic;
-        }
-        .card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
         }
         ul {
             padding-left: 20px;
+            margin: 0;
+            color: var(--text-muted);
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
-        .highlight {
-            color: #58a6ff;
+        .project {
+            margin-bottom: 25px;
+        }
+        .project h3 {
+            color: var(--accent);
+            margin: 0 0 5px 0;
+            font-size: 1.4em;
+        }
+        .project-meta {
+            font-size: 0.9em;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            font-family: monospace;
+        }
+        .education-item, .cert-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .education-title {
             font-weight: bold;
+            color: var(--accent);
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>HI this is Shubham here !</h1>
-            <p class="subtitle">🚀 My Automated DevOps Pipeline is successfully working on Red Hat Linux!</p>
-        </header>
-
-        <div class="card">
-            <h2>About Me</h2>
-            <p>I am a final-year MCA student specializing in Cloud Infrastructure and DevOps. I am passionate about building practical, hands-on infrastructure—from engineering automated CI/CD pipelines to simulating network defense strategies in my custom cybersecurity home lab.</p>
-        </div>
-
-        <div class="card">
-            <h2>Technical Arsenal</h2>
-            <ul>
-                <li><span class="highlight">Cloud Platforms:</span> AWS (Active prep for Solutions Architect Associate) & exploring Microsoft Azure.</li>
-                <li><span class="highlight">DevOps & Automation:</span> GitHub Actions, Terraform, Kubernetes.</li>
-                <li><span class="highlight">Systems & Security:</span> Red Hat Enterprise Linux (RHEL), Network Security, Threat Analysis.</li>
-                <li><span class="highlight">Programming & Data:</span> Python for automation, Data Analysis workflows.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Featured Project: This Live Website</h2>
-            <p>This exact page you are reading is deployed using a continuous integration and deployment (CI/CD) architecture. Here is how it runs under the hood:</p>
-            <ul>
-                <li>Hosted in the cloud on an <strong>AWS EC2 t3.micro</strong> instance.</li>
-                <li>Operating on a secure <strong>Red Hat Enterprise Linux (RHEL)</strong> environment.</li>
-                <li>Web traffic is actively served via an <strong>Apache (httpd)</strong> web server.</li>
-                <li>Updates are automatically pushed directly from my repository using a <strong>GitHub Actions</strong> pipeline via zero-trust SSH/SCP transfer.</li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
