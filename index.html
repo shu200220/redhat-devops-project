@@ -3,69 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham Tanwar | Cloud & Data</title>
+    <title>Shubham Tanwar | Cloud & DevOps</title>
     <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary-accent: #38bdf8;
+            --success-accent: #10b981;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             margin: 0;
-            padding: 40px 20px;
-            line-height: 1.6;
+            padding: 0;
+            line-height: 1.7;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
+            padding: 50px 20px;
         }
-        h1 { color: #58a6ff; font-size: 2.5em; margin-bottom: 5px; }
-        h2 { color: #2ea043; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-top: 30px; }
+
+        header {
+            text-align: center;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--text-main);
+            font-size: 2.8em;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        h1 span {
+            color: var(--primary-accent);
+        }
+
+        .contact-links {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: var(--text-main);
+            font-size: 1.5em;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--primary-accent);
+            border-radius: 4px;
+        }
+
         .card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
+            background-color: var(--card-bg);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        .highlight { color: #58a6ff; font-weight: bold; }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+            border-color: #475569;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05em;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        /* Modern Skill Badges */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--primary-accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .badge-green {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success-accent);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <header style="text-align: center; margin-bottom: 40px;">
-            <h1>Shubham Tanwar</h1>
-            <p>📍 New Delhi | 📞 9717981817 | ✉️ shubhamtanwar691@gmail.com</p>
+        <header>
+            <h1>Shubham <span>Tanwar</span></h1>
+            <div class="contact-links">
+                📍 New Delhi | 📞 9717981817 | ✉️ shubhamtanwar691@gmail.com
+            </div>
         </header>
 
         <div class="card">
             <h2>Professional Summary</h2>
-            <p>IT Professional specializing in Data Analytics and Cloud Infrastructure. Proven expertise building automated pipelines on AWS and Azure, alongside analyzing complex datasets using Python and SQL.</p>
+            <p>I am an IT Professional and final-year MCA student bridging the gap between Data Analytics and Cloud Infrastructure. I specialize in building hands-on, automated infrastructure—from engineering CI/CD pipelines and managing Linux servers to leveraging Python and SQL for data-driven decision-making.</p>
         </div>
 
         <div class="card">
-            <h2>Live Cloud Project: Automated CI/CD Pipeline</h2>
-            <ul>
-                <li><strong>Architecture:</strong> Hosted on AWS EC2 running Red Hat Enterprise Linux (RHEL).</li>
-                <li><strong>Automation:</strong> Engineered a continuous deployment pipeline using GitHub Actions to automatically push code to this live Apache server via secure SSH.</li>
-            </ul>
+            <h2>Technical Arsenal</h2>
+            <p>Core technologies I use to build, deploy, and analyze:</p>
+            <div class="badge-container">
+                <span class="badge">AWS (EC2, VPC)</span>
+                <span class="badge">Red Hat Linux (RHEL)</span>
+                <span class="badge">GitHub Actions (CI/CD)</span>
+                <span class="badge">Python</span>
+                <span class="badge">SQL</span>
+                <span class="badge">Bash Scripting</span>
+                <span class="badge">Docker & Kubernetes</span>
+                <span class="badge">Power BI</span>
+            </div>
         </div>
 
         <div class="card">
-            <h2>Technical Skills</h2>
+            <h2 style="color: var(--success-accent);">Live Architecture: This Portfolio</h2>
+            <p>This exact page is actively deployed using a zero-touch Continuous Deployment architecture. Here is the operational workflow:</p>
             <ul>
-                <li><span class="highlight">Cloud & DevOps:</span> AWS, Azure, GCP, Docker, Kubernetes, Terraform, CI/CD.</li>
-                <li><span class="highlight">Systems:</span> Linux CentOS, RHEL, Bash/Shell Scripting, Networking.</li>
-                <li><span class="highlight">Data:</span> Python, SQL, Power BI, Tableau, Pandas, NumPy, ETL.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Education & Certifications</h2>
-            <ul>
-                <li><strong>MCA:</strong> Vivekananda Institute of Professional Studies -TC (Expected 2026)</li>
-                <li><strong>Oracle:</strong> Cloud Infrastructure 2025 Foundations Associate</li>
-                <li><strong>Red Hat:</strong> RHCSA & RHCSE Training (Network Nuts)</li>
+                <li><strong>Cloud Provisioning:</strong> Hosted on an <strong>AWS EC2</strong> instance using strict Security Groups.</li>
+                <li><strong>System Environment:</strong> Operating on a secure <strong>Red Hat Enterprise Linux (RHEL)</strong> foundation.</li>
+                <li><strong>Web Service:</strong> Traffic is actively served and routed via an <strong>Apache (httpd)</strong> web server.</li>
+                <li><strong>Pipeline Automation:</strong> Code commits trigger a <strong>GitHub Actions</strong> workflow, executing a secure SCP transfer to update the production environment instantly.</li>
             </ul>
         </div>
     </div>
